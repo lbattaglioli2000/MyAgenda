@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        {{ ucwords($course->instructor) }}'s <b>{{ ucwords($course->name) }}</b>
+                        {{ ucwords($course->instructor) }}'s <b>{{ ucwords($course->name) }}</b> <a class="btn btn-outline-danger" href="{{ route('user.delete.course', $course->id) }}">Delete this class</a>
                     </div>
                     <div class="card-body">
 
@@ -60,8 +60,6 @@
         </div>
         <hr>
         <a class="btn btn-block btn-outline-dark btn-lg" href="{{ route('user.home') }}">Go back to your dashboard</a>
-        <br>
-        <a class="btn btn-block btn-outline-danger btn-lg" href="{{ route('user.delete.course', $course->id) }}">Delete this class</a>
         <br>
     </div>
 @endsection
